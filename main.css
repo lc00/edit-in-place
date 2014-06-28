@@ -28,11 +28,7 @@ p:hover{
 
 
 .inputBox{
-	width: 80%;
-	height: 50px;
-	background-color: orange;
-
-
+	background-color: orange
 }
 
 
@@ -41,6 +37,8 @@ text-align: right;
 margin-top:-30px;
 }
 
+/*.editable{
 
-
+}
+*/
 

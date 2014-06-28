@@ -1,38 +1,40 @@
 $(document).on('ready', function() {
-  var input =   "<div class='container-input'>" +
-                    "<textarea type=text class='inputBox'></textarea></input>" + 
+    var input =   "<textarea type=text class='inputBox'></textarea></input>" +            
                     "<div class='container-button'>" + 
                     "<button class='button save'>save</button>" + 
-                    "<button class='button cancel'>x</button>" +
-                    "</div>" +
-                    "</div>"
+                    "<button class='button cancel'>x</button>" +                    
+                    "</div>" 
+                   
 
 	$('p').on('click', function(){
     
-    var offset = $(this).offset();
-    $(this).hide();
+         $(this).hide();
+         var height = $(this).height();
+         var width = $(this).width();
 
-    $('.container-input').css({
-       top: offset.top + "px",
-     left: offset.left + "px"
-    });
-
-      
-
-    $(this).closest('.container-second').append(input);
-    $('.inputBox').select();
-    $('.inputBox').val($(this).text());
+        
+        $(this).closest('.container').append(input);
+        $('.inputBox').css({
+            width: width * 0.8,
+            height: height,
+            margin: 0,
+            padding: 0,
+            'font-weight': "bold"
+        });
+        $('.inputBox').select();
+        $('.inputBox').val($(this).text());
 
     // $(this).setSelectionRange(0,0);
-	})
+	});
 
 
- $(document).on('click', '.button', function(){
-    $('p').text($('.inputBox').val());
-    $('p').show();
-    $('.container-input').remove();
-
- })
+   $(document).on('click', '.button', function(){
+      $('p').text($('.inputBox').val());
+      $('.inputBox').remove();
+      $('.container-button').remove();
+      $('p').show();
+      
+    });
 
 
 
