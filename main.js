@@ -1,6 +1,6 @@
 $(document).on('ready', function() {
   var input =   "<div class='container-input'>" +
-                    "<input type=text class='inputBox'></input>" + 
+                    "<textarea type=text class='inputBox'></textarea></input>" + 
                     "<div class='container-button'>" + 
                     "<button class='button save'>save</button>" + 
                     "<button class='button cancel'>x</button>" +
@@ -8,8 +8,18 @@ $(document).on('ready', function() {
                     "</div>"
 
 	$('p').on('click', function(){
+    
+    var offset = $(this).offset();
     $(this).hide();
-    $(this).closest('.container').append(input);
+
+    $('.container-input').css({
+       top: offset.top + "px",
+     left: offset.left + "px"
+    });
+
+      
+
+    $(this).closest('.container-second').append(input);
     $('.inputBox').select();
     $('.inputBox').val($(this).text());
 
