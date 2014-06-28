@@ -1,20 +1,43 @@
 .container{
-	width:500px;
-	height: 500px;
-	margin-left:15%;
+	width:80%;
+	height: 300px;
+	/*margin-left:15%;*/
 	background-color: pink;
 	text-align: center;
 }
 
-.text-box {
-	width: 80%;
-	height: 100px;
-	/*background-color: blue;*/
+/*.container-second{
+	width: 60%;
+	height: 200px;
+}*/
 
+p{
+	margin: 0 auto;
+	background-color: white;
+	height: 100px;
+	width: 80%;
+	/*position: absolute;*/
 
 }
 
-.text-box:hover{
+p:hover{
+	background-color: orange;
+	cursor: pointer;
+}
+
+.inputBox{
+	width: 80%;
+	height: 50px;
 	background-color: orange;
 
+
 }
+
+
+.container-button {
+text-align: right;
+margin-top:-30px;
+}
+
+
+

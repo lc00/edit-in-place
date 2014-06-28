@@ -1,18 +1,51 @@
 $(document).on('ready', function() {
-  	$('.text-box').hover(function(){
-  		$(this).css('background-color', 'orange')
-  		
-  	});
+  var input =   "<div class='container-input'>" +
+                    "<input type=text class='inputBox'></input>" + 
+                    "<div class='container-button'>" + 
+                    "<button class='button save'>save</button>" + 
+                    "<button class='button cancel'>x</button>" +
+                    "</div>" +
+                    "</div>"
 
+	$('p').on('click', function(){
+    $(this).hide();
+    $(this).closest('.container').append(input);
+    $('.inputBox').select();
+    $('.inputBox').val($(this).text());
 
-	$('.text-box').on('click', function(){
-		console.log("snow")
-
-
+    // $(this).setSelectionRange(0,0);
 	})
+
+
+ $(document).on('click', '.button', function(){
+    $('p').text($('.inputBox').val());
+    $('p').show();
+    $('.container-input').remove();
+
+ })
 
 
 
 
 });
 
+
+
+
+
+
+ // <input type="text" class="text-box"></input>
+ //    <div class="container-second">
+ //      <button class="save text">save</button>
+ //      <button class="cancel text">x</button>
+ //    </div>
+
+    // $('p').on('mouseenter', function(){
+    //  $(this).css('background-color', 'orange')
+    //  $(this).css('cursor','pointer');
+    // });
+
+    // $('p').on('mouseleave', function(){
+    //  $(this).css('background-color', 'white')
+      
+    // });
