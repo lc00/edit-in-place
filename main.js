@@ -4,9 +4,10 @@ $(document).on('ready', function() {
                     "<button class='button save'>save</button>" + 
                     "<button class='button cancel'>x</button>" +                    
                     "</div>" 
-                   
+     
+    var myObj;              
 
-	$('p').on('click', function(){
+	$(document).on('click', '.editable', function(){
     
          $(this).hide();
          var height = $(this).height();
@@ -24,19 +25,27 @@ $(document).on('ready', function() {
         $('.inputBox').select();
         $('.inputBox').val($(this).text());
 
+        myObj = $(this);
+
     // $(this).setSelectionRange(0,0);
 	});
 
 
    $(document).on('click', '.button', function(){
-      $('p').text($('.inputBox').val());
+      $(myObj).text($('.inputBox').val());
       $('.inputBox').remove();
       $('.container-button').remove();
-      $('p').show();
+      $(myObj).show();
       
     });
 
+   // $('.editable').hover(function(){
+   //      $(this).css('background-color','orange');
+   // });
 
+   // $('.editable').mouseleave(function(){
+   //      $(this).css('background-color','orange');
+   // });
 
 
 });

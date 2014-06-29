@@ -1,9 +1,16 @@
+.big-container{
+	width: 80%;
+	height: 500px;
+	background-color: blue;
+	text-align: center;
+}
+
+
 .container{
 	width:80%;
-	height: 300px;
 	/*margin-left:15%;*/
 	background-color: pink;
-	text-align: center;
+	padding-top: 10px;
 }
 
 /*.container-second{
@@ -11,8 +18,19 @@
 	height: 200px;
 }*/
 
+h4{
+	background-color: #e74c3c;
+	width: 80%;
+	height: 20px;
+	margin: 0 auto;
+	padding:0 10px;
+	/*margin: 10px;*/
+	/*top:20px;*/
+}
+
 p{
 	margin: 0 auto;
+	padding: 0 10px;
 	background-color: white;
 	height: 100px;
 	width: 80%;
@@ -21,7 +39,7 @@ p{
 }
 
 p:hover{
-	background-color: orange;
+	/*background-color: orange;*/
 	cursor: pointer;
 }
 
